@@ -5,6 +5,6 @@ resources:
 - service.yaml
 - route.yaml
 images:
-- digest: sha256:f9fc141d389535f81e6f6df15bb9921bd82bf73cc1908c60cb7e0ff1a6c4e280
+- digest: sha256:d97b96c80a4e4f6a5165e8eee853c483673324f6f72c89dee27d3c5cc9aafaf0
   name: quay.io/monishkumar/project-demo
-  newName: quay.io/monishkumar/project-demo:f086d1a7df9a11169f222eb29a5f45013963fcde
+  newName: quay.io/monishkumar/project-demo:76942c9a3dcd3f5711c8dc89090402f672280c12
