@@ -6,10 +6,13 @@ spec:
   hosts:
     - productpage
   http:
-    - route: [{destination: [[[[{host: productpage}]], {subset: 1.1-SNAPSHOT}]], weight: 10}, {destination: {}}, {destination: {}}, {destination: {}}]
+    - route: [{destination: [[[[{host: productpage}]], {subset: 1.1-SNAPSHOT}]], weight: 10}, {destination: {}}, {destination: {}}, {destination: {}}, {destination: {}}, {destination: {}}, {destination: {}}]
       destination:
         - host: productpage
         - host: {}
         - host: productpage
         - host: {}
+        - host: productpage
+        - host: productpage
+        - host: productpage
         - host: productpage
