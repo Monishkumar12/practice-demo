@@ -7,6 +7,21 @@ spec:
     - productpage
   http:
     - route:
-        - destination: {}
-      destination:
-        - host: productpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
