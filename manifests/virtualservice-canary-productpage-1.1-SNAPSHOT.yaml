@@ -6,6 +6,4 @@ spec:
   hosts:
     - productpage
   http:
-    - route: [{destination: {}}]
-      destination:
-        - host: productpage
+    - route: 
