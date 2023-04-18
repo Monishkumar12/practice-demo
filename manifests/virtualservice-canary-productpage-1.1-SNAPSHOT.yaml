@@ -10,4 +10,8 @@ spec:
         - destination:
             host: productpage
             subset: 1.1-SNAPSHOT
-          weight: 90
+          weight: 45
+        - destination:
+            host: productpage
+            subset: 1.1-SNAPSHOT
+          weight: 45
