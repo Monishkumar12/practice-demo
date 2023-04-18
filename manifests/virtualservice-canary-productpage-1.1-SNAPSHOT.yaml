@@ -7,15 +7,4 @@ spec:
     - productpage
   http:
     - route:
-        - destination:
-            host: productpage
-            subset: 1.1-SNAPSHOT
-          weight: "30"
-        - destination:
-            host: productpage
-            subset: 1.1-SNAPSHOT
-          weight: "30"
-        - destination:
-            host: productpage
-            subset: 1.1-SNAPSHOT
-          weight: "30"
+
