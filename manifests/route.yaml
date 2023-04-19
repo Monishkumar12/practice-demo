@@ -1,12 +1,13 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: productpage-dev
+  name: productpage-dev-route
 spec:
-  port:
-    targetPort: 8080-tcp
   to:
     kind: Service
     name: productpage-dev
+  port:
+    targetPort: http
   tls:
+    insecureEdgeTerminationPolicy: Redirect
     termination: edge
