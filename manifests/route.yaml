@@ -6,7 +6,7 @@ spec:
   port:
     targetPort: 8080-tcp
   to:
-    kind: Service
+    kind: VirtualService
     name: productpage-dev
   tls:
     termination: edge
