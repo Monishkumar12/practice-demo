@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: productpage-dev-svc
+spec:
+  selector:
+    app: productpage
+    version: dev
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 9080
