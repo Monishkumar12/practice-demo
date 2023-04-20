@@ -3,7 +3,7 @@ kind: DestinationRule
 metadata:
   name: productpage
 spec:
-  host: productpage
+  host: dev
   subsets:
     - name: v1
       labels:
