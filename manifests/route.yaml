@@ -6,6 +6,7 @@ spec:
   to:
     kind: Service
     name: productpage-dev
+  path: /WebApp
   port:
     targetPort: http
   tls:
