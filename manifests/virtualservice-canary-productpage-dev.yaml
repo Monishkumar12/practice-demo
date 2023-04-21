@@ -4,14 +4,14 @@ metadata:
   name: productpage-dev
 spec:
   hosts:
-    - dev
+    - productpage
   http:
     - route:
         - destination:
-            host: dev
+            host: productpage
             subset: dev
           weight: 50
         - destination:
-            host: dev
+            host: productpage
             subset: dev
           weight: 50
