@@ -1,14 +1,32 @@
-apiVersion: networking.istio.io/v1alpha3
+# apiVersion: networking.istio.io/v1alpha3
+# kind: Gateway
+# metadata:
+#   name: india-gateway
+# spec:
+#   selector:
+#     istio: ingressgateway # use istio default controller
+#   servers:
+#   - port:
+#       number: 80
+#       name: http
+#       protocol: HTTP
+#     hosts:
+#     - "*"
+
 kind: Gateway
+apiVersion: networking.istio.io/v1alpha3
 metadata:
-  name: india-gateway
+  namespace: istio-servicemesh1
+  name: productpage-dev-gateway-1
+  labels:
+    kiali_wizard: request_routing
 spec:
   selector:
-    istio: ingressgateway # use istio default controller
+    istio: ingressgateway
   servers:
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-    - "*"
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - '*'
