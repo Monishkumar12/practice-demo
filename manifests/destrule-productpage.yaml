@@ -1,13 +1,33 @@
-apiVersion: networking.istio.io/v1alpha3
+# apiVersion: networking.istio.io/v1alpha3
+# kind: DestinationRule
+# metadata:
+#   name: productpage
+# spec:
+#   host: productpage
+#   subsets:
+#     - name: v1
+#       labels:
+#         version: v1
+#     - name: dev
+#       labels:
+#         version: dev
+
+
 kind: DestinationRule
+apiVersion: networking.istio.io/v1alpha3
 metadata:
-  name: productpage
+  namespace: istio-servicemesh1
+  name: productpage-dev
+  labels:
+    kiali_wizard: request_routing
+  annotations: ~
 spec:
-  host: productpage
+  host: productpage-dev.istio-servicemesh1.svc.cluster.local
   subsets:
-    - name: v1
-      labels:
-        version: v1
     - name: dev
       labels:
         version: dev
+  trafficPolicy:
+    loadBalancer:
+      simple: ROUND_ROBIN
+      consistentHash: ~
