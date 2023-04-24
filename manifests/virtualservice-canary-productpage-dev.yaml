@@ -7,7 +7,10 @@ spec:
     - productpage
   http:
     - route:
-
+        - destination:
+            host: productpage
+            subset: dev
+          weight: 90
 
 # kind: VirtualService
 # apiVersion: networking.istio.io/v1alpha3
@@ -27,5 +30,3 @@ spec:
 #     - '*'
 #   gateways:
 #     - istio-servicemesh1/productpage-dev-gateway-1
-
-
