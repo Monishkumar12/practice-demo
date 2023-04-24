@@ -1,34 +1,31 @@
-# apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: productpage-dev
+spec:
+  hosts:
+    - productpage
+  http:
+    - route:
+
+
 # kind: VirtualService
+# apiVersion: networking.istio.io/v1alpha3
 # metadata:
+#   namespace: istio-servicemesh1
 #   name: productpage-dev
+#   labels:
+#     kiali_wizard: request_routing
 # spec:
-#   hosts:
-#     - productpage
 #   http:
 #     - route:
 #         - destination:
-#             host: productpage
+#             host: productpage-dev.istio-servicemesh1.svc.cluster.local
 #             subset: dev
 #           weight: 100
-
-kind: VirtualService
-apiVersion: networking.istio.io/v1alpha3
-metadata:
-  namespace: istio-servicemesh1
-  name: productpage-dev
-  labels:
-    kiali_wizard: request_routing
-spec:
-  http:
-    - route:
-        - destination:
-            host: productpage-dev.istio-servicemesh1.svc.cluster.local
-            subset: dev
-          weight: 100
-  hosts:
-    - '*'
-  gateways:
-    - istio-servicemesh1/productpage-dev-gateway-1
+#   hosts:
+#     - '*'
+#   gateways:
+#     - istio-servicemesh1/productpage-dev-gateway-1
 
 
