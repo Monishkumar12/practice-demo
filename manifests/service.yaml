@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: productpage-dev
 spec:
-  type: ClusterIP
+#   type: ClusterIP
   selector:
     app: productpage
     version: dev
