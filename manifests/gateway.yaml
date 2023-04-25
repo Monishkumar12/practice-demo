@@ -13,20 +13,20 @@
 #     hosts:
 #     - "*"
 
-kind: Gateway
-apiVersion: networking.istio.io/v1alpha3
-metadata:
-  namespace: istio-servicemesh1
-  name: productpage-dev-gateway-1
-  labels:
-    kiali_wizard: request_routing
-spec:
-  selector:
-    istio: ingressgateway
-  servers:
-    - port:
-        number: 8080
-        name: http
-        protocol: HTTP
-      hosts:
-        - '*'
+# kind: Gateway
+# apiVersion: networking.istio.io/v1alpha3
+# metadata:
+#   namespace: istio-servicemesh1
+#   name: productpage-dev-gateway-1
+#   labels:
+#     kiali_wizard: request_routing
+# spec:
+#   selector:
+#     istio: ingressgateway
+#   servers:
+#     - port:
+#         number: 8080
+#         name: http
+#         protocol: HTTP
+#       hosts:
+#         - '*'
