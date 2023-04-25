@@ -24,3 +24,6 @@ spec:
         - name: productpage
           image: quay.io/monishkumar/project-demo:dev
           imagePullPolicy: Always
+          ports: 
+            - containerPort: 8080
+              protocol: TCP
