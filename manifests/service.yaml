@@ -8,7 +8,7 @@ spec:
     app: productpage
     version: dev
   ports:
-    - name: "8080-tcp"
+    - name: "tcp-8080"
       protocol: TCP
       port: 8080
       targetPort: 8080
