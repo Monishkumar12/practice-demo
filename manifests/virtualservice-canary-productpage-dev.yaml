@@ -7,18 +7,6 @@ spec:
     - productpage
   http:
     - route:
-        - destination:
-            host: productpage
-            subset: dev
-          weight: 33
-        - destination:
-            host: productpage
-            subset: dev
-          weight: 33
-        - destination:
-            host: productpage
-            subset: dev
-          weight: 33
 
 # kind: VirtualService
 # apiVersion: networking.istio.io/v1alpha3
