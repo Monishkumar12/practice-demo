@@ -21,21 +21,21 @@
 #       labels:
 #         version: dev
 
-kind: DestinationRule
-apiVersion: networking.istio.io/v1alpha3
-metadata:
-  namespace: istio-servicemesh1
-  name: productpage-dev
-  labels:
-    kiali_wizard: request_routing
-  annotations: ~
-spec:
-  host: productpage-dev.istio-servicemesh1.svc.cluster.local
-  subsets:
-    - name: dev
-      labels:
-        version: dev
-  trafficPolicy:
-    loadBalancer:
-      simple: ROUND_ROBIN
-      consistentHash: ~
+# kind: DestinationRule
+# apiVersion: networking.istio.io/v1alpha3
+# metadata:
+#   namespace: istio-servicemesh1
+#   name: productpage-dev
+#   labels:
+#     kiali_wizard: request_routing
+#   annotations: ~
+# spec:
+#   host: productpage-dev.istio-servicemesh1.svc.cluster.local
+#   subsets:
+#     - name: dev
+#       labels:
+#         version: dev
+#   trafficPolicy:
+#     loadBalancer:
+#       simple: ROUND_ROBIN
+#       consistentHash: ~
