@@ -11,6 +11,9 @@ spec:
     - name: dev
       labels:
         version: dev
+    - name: dev
+      labels:
+        version: dev
 
 # kind: DestinationRule
 # apiVersion: networking.istio.io/v1alpha3
