@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: productpage-dev
 spec:
-#   type: ClusterIP
+  type: ClusterIP
   selector:
     app: productpage
     version: dev
   ports:
-    - name: 8080-tcp
+    - name: tcp
       protocol: TCP
       port: 8080
       targetPort: 8080
