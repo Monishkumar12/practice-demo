@@ -9,7 +9,7 @@ spec:
     weight: 100
   path: /WebApp
   port:
-    targetPort: 8080-TCP
+    targetPort: 8080-tcp
   tls:
     insecureEdgeTerminationPolicy: Redirect
     termination: edge
