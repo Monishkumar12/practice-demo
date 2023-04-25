@@ -6,9 +6,10 @@ spec:
   to:
     kind: Service
     name: productpage-dev
+    weight: 100
   path: /WebApp
   port:
-    targetPort: 8080-tcp
+    targetPort: tcp
   tls:
     insecureEdgeTerminationPolicy: Redirect
     termination: edge
