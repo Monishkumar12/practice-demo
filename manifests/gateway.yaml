@@ -13,6 +13,6 @@ spec:
         name: http
       hosts:
         - '*'
-    selector:
+  selector:
       istio: ingressgateway
 
