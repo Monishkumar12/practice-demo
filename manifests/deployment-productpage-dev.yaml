@@ -13,12 +13,12 @@ spec:
       version: dev
   template:
     metadata:
-      annotations:
-        sidecar.istio.io/inject: "true"
-        maistra.io/expose-route: "true"
       labels:
         app: productpage
         version: dev
+        maistra.io/expose-route: "true"
+    annotations:
+       sidecar.istio.io/inject: "true"           
     spec:
       containers:
         - name: productpage
