@@ -1,0 +1,15 @@
+kind: DestinationRule
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: productpage-dev  
+  namespace: istio-servicemesh1 
+  labels:    
+    kiali_wizard: request_routing
+spec: 
+  host: productpage-dev.istio-servicemesh1.svc.cluster.local  
+  trafficPolicy:    
+    loadBalancer: {} 
+  subsets:   
+    - name: dev   
+      labels:
+        version: dev
