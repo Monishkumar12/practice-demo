@@ -17,9 +17,8 @@ spec:
         app: productpage
         version: dev
         maistra.io/expose-route: "true"
-      annotations:
-        sidecar.istio-injection/inject: "true"
-       # sidecar.istio.io/inject: "true"
+      annotations: 
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - name: productpage
