@@ -1,0 +1,18 @@
+kind: Gateway
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: productpage-dev-gateway
+  namespace: istio-servicemesh1
+  labels:
+    kiali_wizard: request_routing
+spec:
+  servers:
+    - port:
+        number: 8080
+        protocol: HTTP
+        name: http
+      hosts:
+        - '*'
+    selector:
+      istio: ingressgateway
+
