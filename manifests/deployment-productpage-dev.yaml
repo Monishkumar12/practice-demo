@@ -18,13 +18,13 @@ spec:
         version: dev
         maistra.io/expose-route: "true"
       annotations:
-        sidecar.istio.io/inject: "true"           
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
-        - name: productpage
-          image: quay.io/monishkumar/project-demo:dev
-          imagePullPolicy: Always
-          ports: 
-            - containerPort: 8080
-              protocol: TCP
-              name: "tcp-8080"
+      - name: productpage
+        image: quay.io/monishkumar/project-demo:dev
+        imagePullPolicy: Always
+        ports:
+        - name: tcp-8080
+          containerPort: 8080
+          protocol: TCP
