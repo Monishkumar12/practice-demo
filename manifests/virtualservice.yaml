@@ -9,11 +9,11 @@ spec:
   http:
     - route:
         - destination:
-            host: productpage-dev.project-cyclone.svc.cluster.local
+            host: productpage.dev.svc.cluster.local
             subset: dev
           weight: 70
         - destination:
-            host: productpage-dev.project-cyclone.svc.cluster.local
+            host: productpage.dev.svc.cluster.local
             subset: dev1
           weight: 30 
   hosts:
