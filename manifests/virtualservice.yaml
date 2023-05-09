@@ -1,7 +1,7 @@
 kind: VirtualService
 apiVersion: networking.istio.io/v1alpha3
 metadata:
-  namespace: project-cyclone
+  namespace: dev
   name: productpage
   labels:
     kiali_wizard: request_routing
@@ -19,4 +19,4 @@ spec:
   hosts:
     - '*'
   gateways:
-    - project-cyclone/productpage-gateway
+    - dev/productpage-gateway
